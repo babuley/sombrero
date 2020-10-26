@@ -1,0 +1,170 @@
+{
+  "timeslotList": [
+    {"dayOfWeek":"MONDAY","startTime":"08:30:00","endTime":"09:30:00"},
+    {"dayOfWeek":"MONDAY","startTime":"09:30:00","endTime":"10:30:00"},
+    {"dayOfWeek":"MONDAY","startTime":"10:30:00","endTime":"11:30:00"},
+    {"dayOfWeek":"MONDAY","startTime":"13:30:00","endTime":"14:30:00"},
+    {"dayOfWeek":"MONDAY","startTime":"14:30:00","endTime":"15:30:00"}
+    ],
+    "roomList": [
+      { "name": "Room A", "capacity": 30 },
+      { "name": "Lab B", "capacity": 20,
+        "roomType": "lab"
+      },
+      { "name": "Room C", "capacity": 30 },
+      { "name": "Room D", "capacity": 15 }
+    ],
+    "lessonList": [
+      {
+        "id": 101,
+        "subject": { "name": "Math" },
+        "teacher": {
+          "id": 1111,
+          "name": "B. May",
+          "subject": { "name": "Math" }
+        },
+        "studentGroup": { "id": 10001, "name": "Cauliflower", "capacity": 10 }
+      },
+      {
+        "id": 102,
+        "subject": { "name": "Physics" },
+        "teacher": {
+          "id": 1112,
+          "name": "M. Curie",
+          "subject": { "name": "Physics" }
+        },
+        "studentGroup": { "id": 10001, "name": "Cauliflower", "capacity": 10 }
+      },
+      {
+        "id": 103,
+        "subject": { "name": "Geography" },
+        "teacher": {
+          "id": 1113,
+          "name": "M. Polo",
+          "subject": { "name": "Geography" }
+        },
+        "studentGroup": { "id": 10001, "name": "Cauliflower", "capacity": 10 }
+      },
+      {
+        "id": 104,
+        "subject": { "name": "English" },
+        "teacher": {
+          "id": 1114,
+          "name": "I. Jones",
+          "subject": { "name": "English" }
+        },
+        "studentGroup": { "id": 10001, "name": "Cauliflower", "capacity": 10 }
+      },
+      {
+        "id": 105,
+        "subject": { "name": "Spanish" },
+        "teacher": {
+          "id": 1115,
+          "name": "P. Cruz",
+          "subject": { "name": "Spanish" }
+        },
+        "studentGroup": { "id": 10001, "name": "Cauliflower", "capacity": 10 }
+      },
+      {
+        "id": 201,
+        "subject": { "name": "Math" },
+        "teacher": {
+          "id": 1111,
+          "name": "B. May",
+          "subject": { "name": "Math" }
+        },
+        "studentGroup": { "id": 10001, "name": "Broccoli", "capacity": 20 }
+      },
+      {
+        "id": 202,
+        "subject": { "name": "Chemistry" },
+        "teacher": {
+          "id": 1112,
+          "name": "M. Curie",
+          "subject": { "name": "Physics" }
+        },
+        "studentGroup": { "id": 10001, "name": "Broccoli", "capacity": 20 }
+      },
+      {
+        "id": 203,
+        "subject": { "name": "History" },
+        "teacher": {
+          "id": 1114,
+          "name": "I. Jones",
+          "subject": { "name": "English" }
+        },
+        "studentGroup": { "id": 10001, "name": "Broccoli", "capacity": 20 }
+      },
+      {
+        "id": 204,
+        "subject": { "name": "English" },
+        "teacher": {
+          "id": 1115,
+          "name": "P. Cruz",
+          "subject": { "name": "Spanish" }
+        },
+        "studentGroup": { "id": 10001, "name": "Broccoli", "capacity": 20 }
+      },
+      {
+        "id": 205,
+        "subject": { "name": "French" },
+        "teacher": {
+          "id": 1112,
+          "name": "M. Curie",
+          "subject": { "name": "Physics" }
+        },
+        "studentGroup": { "id": 10001, "name": "Broccoli", "capacity": 20 }
+      },
+      {
+        "id": 301,
+        "subject": { "name": "ICT" },
+        "teacher": {
+          "id": 1111,
+          "name": "B. May",
+          "subject": { "name": "Math" }
+        },
+        "studentGroup": { "id": 10001, "name": "Beans", "capacity": 25 }
+      },
+      {
+        "id": 302,
+        "subject": { "name": "PE" },
+        "teacher": {
+          "id": 1112,
+          "name": "M. Curie",
+          "subject": { "name": "Physics" }
+        },
+        "studentGroup": { "id": 10001, "name": "Beans", "capacity": 25 }
+      },
+      {
+        "id": 303,
+        "subject": { "name": "Drawing" },
+        "teacher": {
+          "id": 1114,
+          "name": "I. Jones",
+          "subject": { "name": "English" }
+        },
+        "studentGroup": { "id": 10001, "name": "Beans", "capacity": 25 }
+      },
+      {
+        "id": 304,
+        "subject": { "name": "Music" },
+        "teacher": {
+          "id": 1115,
+          "name": "P. Cruz",
+          "subject": { "name": "Spanish" }
+        },
+        "studentGroup": { "id": 10001, "name": "Beans", "capacity": 25 }
+      },
+      {
+        "id": 305,
+        "subject": { "name": "PE" },
+        "teacher": {
+          "id": 1112,
+          "name": "M. Curie",
+          "subject": { "name": "Physics" }
+        },
+        "studentGroup": { "id": 10001, "name": "Beans", "capacity": 25 }
+      }
+    ]
+}
+  
