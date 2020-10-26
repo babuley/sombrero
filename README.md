@@ -2,6 +2,7 @@
 ![Java CI with Maven](https://github.com/babuley/sombrero/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
 
 Extended OptaPlanner playground for school timetable.
+Inspired by OptaPlanner excellent manual: https://docs.optaplanner.org/7.44.0.Final/optaplanner-docs/html_single/index.html#quickStart
 
 ### Samples
 To run the samples
