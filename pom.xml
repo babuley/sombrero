@@ -10,12 +10,12 @@
 	</parent>
 	<groupId>com.babuley</groupId>
 	<artifactId>sombrero</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>sombrero</name>
 	<description>optoplanner project for Spring Boot</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 
 	<dependencies>
