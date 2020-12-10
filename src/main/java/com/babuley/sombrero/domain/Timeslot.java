@@ -1,5 +1,10 @@
 package com.babuley.sombrero.domain;
 
+import org.optaplanner.core.api.domain.lookup.PlanningId;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
@@ -7,7 +12,13 @@ import java.time.LocalTime;
  * Problem fact
  */
 
+@Entity
 public class Timeslot {
+
+    @PlanningId
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private DayOfWeek dayOfWeek;
     private LocalTime startTime;
@@ -17,6 +28,13 @@ public class Timeslot {
     }
 
     public Timeslot(DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
+        this.dayOfWeek = dayOfWeek;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
+
+    public Timeslot(Long id, DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
+        this.id = id;
         this.dayOfWeek = dayOfWeek;
         this.startTime = startTime;
         this.endTime = endTime;

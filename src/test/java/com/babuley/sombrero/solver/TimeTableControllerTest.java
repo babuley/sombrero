@@ -11,6 +11,7 @@ import com.babuley.sombrero.domain.rooms.Room;
 import com.babuley.sombrero.domain.rooms.RoomType;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
+import org.optaplanner.core.api.solver.SolverStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -28,9 +29,18 @@ public class TimeTableControllerTest {
 
     @Test
     @Timeout(600_000)
-    public void solve() {
+    public void solve() throws InterruptedException {
         TimeTable problem = generateProblem();
-        TimeTable solution = timeTableController.solve(problem);
+        timeTableController.submitProblem(problem);
+        timeTableController.solve();
+
+        timeTableController.getSolverStatus();
+        TimeTable solution = timeTableController.getTimeTable();
+        while (solution.getSolverStatus() != SolverStatus.NOT_SOLVING) {
+            Thread.sleep(20L);
+            solution = timeTableController.getTimeTable();
+        }
+
         assertFalse(solution.getLessonList().isEmpty());
         for (Lesson lesson : solution.getLessonList()) {
             assertNotNull(lesson.getTimeslot());
@@ -69,34 +79,34 @@ public class TimeTableControllerTest {
         Subject music = new Subject("Music", true);
         Subject ict = new Subject("ICT", true);
 
-        Teacher may = new Teacher(1111L,"B. May", math);
-        Teacher curie = new Teacher(1112L,"M. Curie", physics);
-        Teacher polo = new Teacher(1113L,"M. Polo", geo);
-        Teacher jones = new Teacher(1114L,"I. Jones", english);
-        Teacher cruz = new Teacher(1115L,"P. Cruz", spanish);
+        Teacher may = new Teacher("B. May", math);
+        Teacher curie = new Teacher("M. Curie", physics);
+        Teacher polo = new Teacher("M. Polo", geo);
+        Teacher jones = new Teacher("I. Jones", english);
+        Teacher cruz = new Teacher("P. Cruz", spanish);
 
-        StudentGroup sg1 = new StudentGroup(10001L, "Cauliflower", 10);
-        StudentGroup sg2 = new StudentGroup(10001L, "Broccoli", 20);
-        StudentGroup sg3 = new StudentGroup(10001L, "Beans", 25);
+        StudentGroup sg1 = new StudentGroup( "Cauliflower", 10);
+        StudentGroup sg2 = new StudentGroup( "Broccoli", 20);
+        StudentGroup sg3 = new StudentGroup("Beans", 25);
 
         List<Lesson> lessonList = new ArrayList<>();
-        lessonList.add(new Lesson(101L, math, may, sg1));
-        lessonList.add(new Lesson(102L, physics, curie, sg1));
-        lessonList.add(new Lesson(103L, geo, polo, sg1));
-        lessonList.add(new Lesson(104L, english, jones, sg1));
-        lessonList.add(new Lesson(105L, spanish, cruz, sg1));
+        lessonList.add(new Lesson(math, may, sg1));
+        lessonList.add(new Lesson( physics, curie, sg1));
+        lessonList.add(new Lesson( geo, polo, sg1));
+        lessonList.add(new Lesson( english, jones, sg1));
+        lessonList.add(new Lesson( spanish, cruz, sg1));
 
-        lessonList.add(new Lesson(201L, math, may, sg2));
-        lessonList.add(new Lesson(202L, chemistry, curie, sg2));
-        lessonList.add(new Lesson(203L, history, jones, sg2));
-        lessonList.add(new Lesson(204L, english,cruz, sg2));
-        lessonList.add(new Lesson(205L, french,curie, sg2));
+        lessonList.add(new Lesson( math, may, sg2));
+        lessonList.add(new Lesson( chemistry, curie, sg2));
+        lessonList.add(new Lesson( history, jones, sg2));
+        lessonList.add(new Lesson(english,cruz, sg2));
+        lessonList.add(new Lesson( french,curie, sg2));
 
-        lessonList.add(new Lesson(301L, ict , may, sg3));
-        lessonList.add(new Lesson(302L, pe, curie, sg3));
-        lessonList.add(new Lesson(303L, drawing, jones, sg3));
-        lessonList.add(new Lesson(304L, music, cruz, sg3));
-        lessonList.add(new Lesson(305L, pe, curie, sg3));
+        lessonList.add(new Lesson(ict , may, sg3));
+        lessonList.add(new Lesson( pe, curie, sg3));
+        lessonList.add(new Lesson( drawing, jones, sg3));
+        lessonList.add(new Lesson( music, cruz, sg3));
+        lessonList.add(new Lesson(pe, curie, sg3));
         return new TimeTable(timeslotList, roomList, lessonList);
     }
 

@@ -1,11 +1,22 @@
 package com.babuley.sombrero.domain.rooms;
 
+import org.optaplanner.core.api.domain.lookup.PlanningId;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Random;
 
 /**
  * A problem fact
  */
+@Entity
 public class Room {
+
+    @PlanningId
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private String name;
 
@@ -20,9 +31,9 @@ public class Room {
         this.name = name;
     }
 
-    public Room(String name, int capacity) {
+    public Room(Long id, String name) {
+        this.id = id;
         this.name = name;
-        this.capacity = capacity;
     }
 
     public Room(String name, int capacity, RoomType roomType) {
@@ -30,6 +41,32 @@ public class Room {
         this.capacity = capacity;
         this.roomType = roomType;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public void setRoomType(RoomType roomType) {
+        this.roomType = roomType;
+    }
+
+    public Room(String name, int capacity) {
+        this.name = name;
+        this.capacity = capacity;
+    }
+
 
     @Override
     public String toString() {
