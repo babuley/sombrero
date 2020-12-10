@@ -1,0 +1,197 @@
+{
+  "timeslotList": [
+    {"dayOfWeek":"MONDAY","startTime":"08:30:00","endTime":"09:30:00"},
+    {"dayOfWeek":"MONDAY","startTime":"09:30:00","endTime":"10:30:00"},
+    {"dayOfWeek":"MONDAY","startTime":"10:30:00","endTime":"11:30:00"},
+    {"dayOfWeek":"MONDAY","startTime":"13:30:00","endTime":"14:30:00"},
+    {"dayOfWeek":"MONDAY","startTime":"14:30:00","endTime":"15:30:00"}
+  ],
+  "roomList": [
+    { "id": 6, "name": "Room A", "capacity": 30, "roomType": "room" },
+    { "id": 7, "name": "Lab B", "capacity": 20, "roomType": "lab" },
+    { "id": 8, "name": "Room C", "capacity": 30, "roomType": "room" },
+    { "id": 9, "name": "Room D", "capacity": 15, "roomType": "room" }
+  ],
+  "lessonList": [
+    {
+      "id": 30,
+      "subject": { "id": 10, "name": "Math", "needsLab": false },
+      "teacher": {
+        "id": 22,
+        "name": "B. May",
+        "subject": { "id": 10, "name": "Math", "needsLab": false }
+      },
+      "studentGroup": { "id": 27, "name": "Cauliflower", "capacity": 10 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 31,
+      "subject": { "id": 11, "name": "Physics", "needsLab": true },
+      "teacher": {
+        "id": 23,
+        "name": "M. Curie",
+        "subject": { "id": 11, "name": "Physics", "needsLab": true }
+      },
+      "studentGroup": { "id": 27, "name": "Cauliflower", "capacity": 10 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 32,
+      "subject": { "id": 12, "name": "Geography", "needsLab": true },
+      "teacher": {
+        "id": 24,
+        "name": "M. Polo",
+        "subject": { "id": 12, "name": "Geography", "needsLab": true }
+      },
+      "studentGroup": { "id": 27, "name": "Cauliflower", "capacity": 10 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 33,
+      "subject": { "id": 13, "name": "English", "needsLab": false },
+      "teacher": {
+        "id": 25,
+        "name": "I. Jones",
+        "subject": { "id": 13, "name": "English", "needsLab": false }
+      },
+      "studentGroup": { "id": 27, "name": "Cauliflower", "capacity": 10 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 34,
+      "subject": { "id": 14, "name": "Spanish", "needsLab": false },
+      "teacher": {
+        "id": 26,
+        "name": "P. Cruz",
+        "subject": { "id": 14, "name": "Spanish", "needsLab": false }
+      },
+      "studentGroup": { "id": 27, "name": "Cauliflower", "capacity": 10 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 35,
+      "subject": { "id": 10, "name": "Math", "needsLab": false },
+      "teacher": {
+        "id": 22,
+        "name": "B. May",
+        "subject": { "id": 10, "name": "Math", "needsLab": false }
+      },
+      "studentGroup": { "id": 28, "name": "Broccoli", "capacity": 20 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 36,
+      "subject": { "id": 15, "name": "Chemistry", "needsLab": true },
+      "teacher": {
+        "id": 23,
+        "name": "M. Curie",
+        "subject": { "id": 11, "name": "Physics", "needsLab": true }
+      },
+      "studentGroup": { "id": 28, "name": "Broccoli", "capacity": 20 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 37,
+      "subject": { "id": 16, "name": "History", "needsLab": false },
+      "teacher": {
+        "id": 25,
+        "name": "I. Jones",
+        "subject": { "id": 13, "name": "English", "needsLab": false }
+      },
+      "studentGroup": { "id": 28, "name": "Broccoli", "capacity": 20 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 38,
+      "subject": { "id": 13, "name": "English", "needsLab": false },
+      "teacher": {
+        "id": 26,
+        "name": "P. Cruz",
+        "subject": { "id": 14, "name": "Spanish", "needsLab": false }
+      },
+      "studentGroup": { "id": 28, "name": "Broccoli", "capacity": 20 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 39,
+      "subject": { "id": 17, "name": "French", "needsLab": false },
+      "teacher": {
+        "id": 23,
+        "name": "M. Curie",
+        "subject": { "id": 11, "name": "Physics", "needsLab": true }
+      },
+      "studentGroup": { "id": 28, "name": "Broccoli", "capacity": 20 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 40,
+      "subject": { "id": 18, "name": "ICT", "needsLab": true },
+      "teacher": {
+        "id": 22,
+        "name": "B. May",
+        "subject": { "id": 10, "name": "Math", "needsLab": false }
+      },
+      "studentGroup": { "id": 29, "name": "Beans", "capacity": 25 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 41,
+      "subject": { "id": 19, "name": "PE", "needsLab": true },
+      "teacher": {
+        "id": 23,
+        "name": "M. Curie",
+        "subject": { "id": 11, "name": "Physics", "needsLab": true }
+      },
+      "studentGroup": { "id": 29, "name": "Beans", "capacity": 25 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 42,
+      "subject": { "id": 20, "name": "Drawing", "needsLab": true },
+      "teacher": {
+        "id": 25,
+        "name": "I. Jones",
+        "subject": { "id": 13, "name": "English", "needsLab": false }
+      },
+      "studentGroup": { "id": 29, "name": "Beans", "capacity": 25 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 43,
+      "subject": { "id": 21, "name": "Music", "needsLab": true },
+      "teacher": {
+        "id": 26,
+        "name": "P. Cruz",
+        "subject": { "id": 14, "name": "Spanish", "needsLab": false }
+      },
+      "studentGroup": { "id": 29, "name": "Beans", "capacity": 25 },
+      "timeslot": null,
+      "room": null
+    },
+    {
+      "id": 44,
+      "subject": { "id": 19, "name": "PE", "needsLab": true },
+      "teacher": {
+        "id": 23,
+        "name": "M. Curie",
+        "subject": { "id": 11, "name": "Physics", "needsLab": true }
+      },
+      "studentGroup": { "id": 29, "name": "Beans", "capacity": 25 },
+      "timeslot": null,
+      "room": null
+    }
+  ]
+}
